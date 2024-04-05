@@ -1,0 +1,2 @@
+morse::encode()
+morse::decode()
