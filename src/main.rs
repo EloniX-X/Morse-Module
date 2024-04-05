@@ -2,7 +2,7 @@
 mod morse {
     use std::{collections::HashMap};
     fn translate (option: bool, text: &str) -> String {
-        let cs: Vec<&str> = text.split(" ").collect();//.filter(|&f| f != "/").collect();
+        let cs: Vec<&str> = text.split(" ").collect();
         let texts: Vec<&str> = cs.iter().map(|&x| if x == "" { "/" } else { x }).collect();
         let translate = HashMap::from([
             ('a', ".-"), 
@@ -61,8 +61,6 @@ mod morse {
             .join("");
         
         res
-        // let b: String = "hey".to_string();
-        // b
     }
 
     }
@@ -82,7 +80,7 @@ mod morse {
 
 fn main() {
     let h = morse::encrypt("eloni hey ok");
-    // println!("{}", h);
+    println!("{}", h);
     let b = morse::decrypt(&h);
     println!("{}", b);
 }
